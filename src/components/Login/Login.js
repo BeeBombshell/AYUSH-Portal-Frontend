@@ -10,7 +10,8 @@ class Login extends Component {
             username: '',
             password: '',
         };
-        this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY1NDY3NzI4MCwiZXhwIjoxODEyMzU3MjgwfQ.M69z0ojaOtiYu0qb1AP_u1Ga87PIinCj3qz0jHMRMEA';
+        
+        this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJiaGF2eWEiLCJpYXQiOjE2NTUyNzc5MDUsImV4cCI6MTgxMjk1NzkwNX0.8PVPMkVNIU1vpCu6pX-XEj6ROPLVCQJU7GjesjPFEAY';
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -47,13 +48,13 @@ class Login extends Component {
     handleSubmit(e) {
         e.preventDefault();
         // this.getWPnonce();
-        axios.get('http://localhost:8080/?rest_route=/wp/v2/users', {
-            // auth: {
-            //     username: 'admin',
-            //     password: 'admin@123'
-            // },
+        axios.get('http://localhost/network/wp-json/wp/v2/users', {
+            auth: {
+                username: 'admin',
+                password: 'admin@123'
+            },
             headers: {
-                'Authorization': `Bearer ${this.token}`,
+                // 'Authorization': `Bearer ${this.token}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 "Access-Control-Allow-Headers": "*",

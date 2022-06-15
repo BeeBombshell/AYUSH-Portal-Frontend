@@ -13,7 +13,7 @@ class SignUp extends Component {
       roles: '',
       country: '',
     };
-    this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY1NDY3NzI4MCwiZXhwIjoxODEyMzU3MjgwfQ.M69z0ojaOtiYu0qb1AP_u1Ga87PIinCj3qz0jHMRMEA';
+    this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJiaGF2eWEiLCJpYXQiOjE2NTUyNzc5MDUsImV4cCI6MTgxMjk1NzkwNX0.8PVPMkVNIU1vpCu6pX-XEj6ROPLVCQJU7GjesjPFEAY';
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -51,22 +51,22 @@ class SignUp extends Component {
     e.preventDefault();
     console.log(this.state);
     // this.getWPnonce();
-    axios.post('http://localhost:8080/wp-json/wp/v2/users', {
+    axios.post('http://localhost/network/wp-json/wp/v2/users', {
       username: this.state.username,
       email: this.state.email,
       password: this.state.password,
       roles: this.state.roles,
     }, {
-      // auth: {
-      //   username: 'admin',
-      //   password: 'admin@123'
-      // },
+      auth: {
+        username: 'admin',
+        password: 'admin@123'
+      },
       headers: {
-        'Authorization': `Bearer ${this.token}`,
+        // 'Authorization': `Bearer ${this.token}`,
         'Accept': 'application/json',
         'Access-Control-Allow-Origin': '*',
-        'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
-        'Access-Control-Request-Header': 'Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+        // 'Access-Control-Request-Method': 'GET, POST, DELETE, PUT, OPTIONS',
       }
     })
       .then(res => {

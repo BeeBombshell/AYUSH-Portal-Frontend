@@ -4,13 +4,14 @@ import Carousel from './components/Carousel/CarouselComp';
 import NavbarHeader from './components/NavbarHeader/NavbarHeader';
 import NavbarMenu from './components/NavbarMenu/NavbarMenu';
 import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
   return (
     <div className="App">
       <NavbarHeader />
       <NavbarMenu />
-      <Login />
+      <SignUp />
       {/* <Carousel /> */}
       {/* <Card /> */}
     </div>
