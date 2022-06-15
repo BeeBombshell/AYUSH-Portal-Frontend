@@ -1,7 +1,7 @@
 import React from "react";
 import "./carouselComp.css";
-import img1 from "../assets/images/img1.png";
-import img2 from "../assets/images/img2.png";
+import img1 from "../../assets/images/img1.png";
+import img2 from "../../assets/images/img2.png";
 import Carousel from 'react-bootstrap/Carousel';
 
 const CarouselComp = () => {

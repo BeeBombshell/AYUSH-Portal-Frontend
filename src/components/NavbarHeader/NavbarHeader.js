@@ -1,5 +1,5 @@
 import React from "react";
-import emblem from "../assets/images/emblem.svg";
+import emblem from "../../assets/images/emblem.svg";
 import "./navbarHeader.css";
 
 const NavbarHeader = () => {
