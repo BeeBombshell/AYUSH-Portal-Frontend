@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'signUp.css';
+import './signUp.css';
 import axios from 'axios';
 
 class SignUp extends Component {
