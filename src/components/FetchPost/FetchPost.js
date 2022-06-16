@@ -13,6 +13,8 @@ class FetchPost extends Component {
             posts: [],
         };
 
+        this.viewPost = false;
+
         this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJiaGF2eWEiLCJpYXQiOjE2NTUyNzc5MDUsImV4cCI6MTgxMjk1NzkwNX0.8PVPMkVNIU1vpCu6pX-XEj6ROPLVCQJU7GjesjPFEAY';
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -76,6 +78,7 @@ class FetchPost extends Component {
                 })
                     .then(res => { 
                         console.log(res.data)
+                        this.viewPost = true;
                         this.setState({ posts: res.data })
                      })
                     .catch(error => { });
@@ -87,7 +90,7 @@ class FetchPost extends Component {
     render() {
         return (
             <div>
-                <div className="container">
+                {!this.viewPost && <div className="container">
                     <div className="FetchPost">
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
@@ -101,7 +104,7 @@ class FetchPost extends Component {
                             <button type="submit" className="btn btn-primary">Fetch Post</button>
                         </form>
                     </div>
-                </div>
+                </div>}
                 <div className="postCard">
                     <PostCard posts={this.state.posts} author={this.state.username} />
                 </div>
