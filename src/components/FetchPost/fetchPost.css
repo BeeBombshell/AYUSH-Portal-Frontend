@@ -1,0 +1,43 @@
+.FetchPost {
+    max-width: 700px;
+    width: 100%;
+    display: table;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.container {
+
+    background-color: rgb(246, 242, 242);
+    border-radius: 10px;
+    max-width: 760px;
+    max-height: 800px;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+
+}
+
+.btn.btn-primary {
+    margin-top: 10px;
+}
+
+.labelForm {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-control {
+
+    border: 0.5px solid #4d4d4d;
+    padding: 5px;
+    color: #4d4d4d;
+}

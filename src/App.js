@@ -5,13 +5,14 @@ import NavbarHeader from './components/NavbarHeader/NavbarHeader';
 import NavbarMenu from './components/NavbarMenu/NavbarMenu';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
+import FetchPost from './components/FetchPost/FetchPost';
 
 function App() {
   return (
     <div className="App">
       <NavbarHeader />
       <NavbarMenu />
-      <Login />
+      <FetchPost />
       {/* <Carousel /> */}
       {/* <Card /> */}
     </div>
