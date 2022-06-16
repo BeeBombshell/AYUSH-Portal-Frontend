@@ -87,25 +87,25 @@ class FetchPost extends Component {
     render() {
         return (
             <div>
-            <div className="container">
-                <div className="FetchPost">
-                    <form onSubmit={this.handleSubmit}>
-                        <div className="form-group">
-                            <label className='labelForm' htmlFor="exampleInputEmail">Username</label>
-                            <input name="username" value={this.state.username} onChange={this.handleChange} type="text" className="form-control" id="exampleInputUsername" placeholder="Enter Username" />
-                        </div>
-                        <div className="form-group">
-                            <label className='labelForm' htmlFor="exampleInputPassword">Password</label>
-                            <input name="password" value={this.state.password} onChange={this.handleChange} type="password" className="form-control" id="exampleInputPassword" placeholder="Enter Password" />
-                        </div>
-                        <button type="submit" className="btn btn-primary">Fetch Post</button>
-                    </form>
+                <div className="container">
+                    <div className="FetchPost">
+                        <form onSubmit={this.handleSubmit}>
+                            <div className="form-group">
+                                <label className='labelForm' htmlFor="exampleInputEmail">Username</label>
+                                <input name="username" value={this.state.username} onChange={this.handleChange} type="text" className="form-control" id="exampleInputUsername" placeholder="Enter Username" />
+                            </div>
+                            <div className="form-group">
+                                <label className='labelForm' htmlFor="exampleInputPassword">Password</label>
+                                <input name="password" value={this.state.password} onChange={this.handleChange} type="password" className="form-control" id="exampleInputPassword" placeholder="Enter Password" />
+                            </div>
+                            <button type="submit" className="btn btn-primary">Fetch Post</button>
+                        </form>
+                    </div>
+                </div>
+                <div className="postCard">
+                    <PostCard posts={this.state.posts} author={this.state.username} />
                 </div>
             </div>
-            <div className="postCard">
-                <PostCard posts={this.state.posts} author={this.state.username} />
-                </div>
-                </div>
         );
     }
 }
