@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './fetchPost.css';
 import axios from 'axios';
+import PostCard from './PostCard';
 
 class FetchPost extends Component {
 
@@ -9,6 +10,7 @@ class FetchPost extends Component {
         this.state = {
             username: '',
             password: '',
+            posts: [],
         };
 
         this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJiaGF2eWEiLCJpYXQiOjE2NTUyNzc5MDUsImV4cCI6MTgxMjk1NzkwNX0.8PVPMkVNIU1vpCu6pX-XEj6ROPLVCQJU7GjesjPFEAY';
@@ -72,7 +74,10 @@ class FetchPost extends Component {
                         password: this.state.password,
                     }
                 })
-                    .then(res => { console.log(res.data) })
+                    .then(res => { 
+                        console.log(res.data)
+                        this.setState({ posts: res.data })
+                     })
                     .catch(error => { });
             }).catch(error => {
                 console.log(error.response)
@@ -81,6 +86,7 @@ class FetchPost extends Component {
 
     render() {
         return (
+            <div>
             <div className="container">
                 <div className="FetchPost">
                     <form onSubmit={this.handleSubmit}>
@@ -96,6 +102,10 @@ class FetchPost extends Component {
                     </form>
                 </div>
             </div>
+            <div className="postCard">
+                <PostCard posts={this.state.posts} author={this.state.username} />
+                </div>
+                </div>
         );
     }
 }
