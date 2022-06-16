@@ -48,10 +48,10 @@ class Login extends Component {
     handleSubmit(e) {
         e.preventDefault();
         // this.getWPnonce();
-        axios.get('http://localhost/network/wp-json/wp/v2/users', {
+        axios.get('http://localhost/network/wp-json/wp/v2/users/me', {
             auth: {
-                username: 'admin',
-                password: 'admin@123'
+                username: this.state.username,
+                password: this.state.password,
             },
             headers: {
                 // 'Authorization': `Bearer ${this.token}`,
@@ -63,7 +63,7 @@ class Login extends Component {
             }
         })
             .then(res => {
-                console.log(res);
+                console.log("Login Success");
             }).catch(error => {
                 console.log(error.response)
             });

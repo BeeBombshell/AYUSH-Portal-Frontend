@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <NavbarHeader />
       <NavbarMenu />
-      <SignUp />
+      <Login />
       {/* <Carousel /> */}
       {/* <Card /> */}
     </div>
