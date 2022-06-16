@@ -1,4 +1,5 @@
 import React from "react";
+import './fetchPost.css'
 
 const PostCard = (props) => {
     const PostList = props.posts.map((post) => {
