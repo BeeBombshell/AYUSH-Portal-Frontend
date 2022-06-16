@@ -10,8 +10,10 @@ import FetchPost from './components/FetchPost/FetchPost';
 function App() {
   return (
     <div className="App">
-      <NavbarHeader />
-      <NavbarMenu />
+      <div className='Header'>
+        <NavbarHeader />
+        <NavbarMenu />
+      </div>
       <FetchPost />
       {/* <Carousel /> */}
       {/* <Card /> */}

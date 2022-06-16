@@ -1,3 +1,8 @@
 .bg-light {
     background-color: #ececec!important;
 }
+
+.navbarHeader {
+    margin: 0;
+    padding: 0;
+}
