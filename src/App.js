@@ -5,6 +5,7 @@ import NavbarMenu from './components/NavbarMenu/NavbarMenu';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import FetchPost from './components/FetchPost/FetchPost';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       </div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/fetchpost" element={<FetchPost />} />
         </Routes>
