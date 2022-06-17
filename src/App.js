@@ -1,6 +1,5 @@
-import Card from './components/Card/Card';
 import './App.css';
-import Carousel from './components/Carousel/CarouselComp';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavbarHeader from './components/NavbarHeader/NavbarHeader';
 import NavbarMenu from './components/NavbarMenu/NavbarMenu';
 import Login from './components/Login/Login';
@@ -14,9 +13,14 @@ function App() {
         <NavbarHeader />
         <NavbarMenu />
       </div>
-      <FetchPost />
-      {/* <Carousel /> */}
-      {/* <Card /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/fetchpost" element={<FetchPost />} />
+        </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
