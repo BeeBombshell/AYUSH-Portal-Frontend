@@ -3,28 +3,28 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import PostMap from "./PostMap";
 import './fetchPost.css';
-import { useState } from "react";
+import { useState} from "react";
 
 const PostCard = (props) => {
     let params = useParams();
     console.log(params.id);
-    let posts = [];
-    let [post, setPost] = useState([]);
+    // let posts = [];
+    let [posts, setPosts] = useState([]);
 
-    axios.get(`http://localhost/network/wp-json/wp/v2/posts/?author=${params.id}`, {
-        auth: {
-            username: "admin",
-            password: "admin@123",
-        },
+        axios.get(`http://localhost/network/wp-json/wp/v2/posts/?author=${params.id}`, {
+            auth: {
+                username: "admin",
+                password: "admin@123",
+            },
 
-    })
-        .then(res => {
-            posts = res.data;
-            console.log(posts);
-        })
-        .catch(error => {
-            console.log(error.response)
-        });
+            })
+            .then(res => {
+                setPosts(res.data);
+                console.log(posts);
+            })
+            .catch(error => {
+                console.log(error.response)
+            });
 
     return (
         <div className="PostMap">

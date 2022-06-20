@@ -21,7 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/fetchpost" element={<FetchPost />} />
-          <Route path="/fetchpost/:id" element={<PostCard1 />} />
+          <Route path="/fetchpost/:id" element={<PostCard />} />
         </Routes>
       </BrowserRouter>
       
