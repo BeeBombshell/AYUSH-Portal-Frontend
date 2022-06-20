@@ -1,48 +1,34 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import './fetchPost.css'
+import PostMap from "./PostMap";
+import './fetchPost.css';
+import { useState } from "react";
 
 const PostCard = (props) => {
     let params = useParams();
     console.log(params.id);
     let posts = [];
+    let [post, setPost] = useState([]);
 
     axios.get(`http://localhost/network/wp-json/wp/v2/posts/?author=${params.id}`, {
         auth: {
             username: "admin",
             password: "admin@123",
-        }, 
+        },
 
     })
-        .then(res => { 
+        .then(res => {
             posts = res.data;
-            // console.log(posts);
+            console.log(posts);
         })
         .catch(error => {
             console.log(error.response)
         });
 
-    const PostList = posts.map((post) => {
-        return (
-            <div>
-                <div key={post.id} className="PostCard">
-                    <div className="card">
-                        <div className="card-header">
-                            <h5>Author</h5>
-                        </div>
-                        <div className="card-body">
-                            <h3 className="card-title">{post.title.rendered}</h3>
-                            <div className="card-text">{post.content.rendered}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    })
     return (
-        <div>
-            {PostList}
+        <div className="PostMap">
+            <PostMap posts={posts} />
         </div>
     )
 }
