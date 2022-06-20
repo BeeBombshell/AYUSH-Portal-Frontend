@@ -2,10 +2,8 @@ import React from "react";
 import "./fetchPost.css";
 
 const PostMap = (props) => {
-    console.log(`Hello ${props.posts}`)
     const PostList = props.posts.map((post) => {
         return (
-            <div>
                 <div key={post.id} className="PostCard">
                     <div className="card">
                         <div className="card-header">
@@ -17,7 +15,6 @@ const PostMap = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
         )
     })
 

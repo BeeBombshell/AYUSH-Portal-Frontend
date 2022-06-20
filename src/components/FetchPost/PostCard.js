@@ -7,7 +7,6 @@ import { useState} from "react";
 
 const PostCard = (props) => {
     let params = useParams();
-    console.log(params.id);
     // let posts = [];
     let [posts, setPosts] = useState([]);
 
@@ -20,7 +19,6 @@ const PostCard = (props) => {
             })
             .then(res => {
                 setPosts(res.data);
-                console.log(posts);
             })
             .catch(error => {
                 console.log(error.response)
