@@ -10,8 +10,11 @@ class FetchPost extends Component {
         this.state = {
             username: '',
             password: '',
+            user_id: 0,
             posts: [],
         };
+
+        let fetched = false;
 
         // this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJiaGF2eWEiLCJpYXQiOjE2NTUyNzc5MDUsImV4cCI6MTgxMjk1NzkwNX0.8PVPMkVNIU1vpCu6pX-XEj6ROPLVCQJU7GjesjPFEAY';
         this.handleChange = this.handleChange.bind(this);
@@ -49,7 +52,6 @@ class FetchPost extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        let user_id = 0;
         // this.getWPnonce();
         axios.get('http://localhost/network/wp-json/wp/v2/users/me', {
             auth: {
@@ -59,8 +61,8 @@ class FetchPost extends Component {
         })
             .then(res => {
                 console.log("Login Success");
-                user_id = res.data.id;
-                <Navigate to={`/fetchpost/${user_id}`} />
+                this.setState({ user_id: res.data.id });
+                this.fetched = true;
             })
             .catch(error => {
                 console.log(error.response)
@@ -84,6 +86,9 @@ class FetchPost extends Component {
                             <button type="submit" className="btn btn-primary">Fetch Post</button>
                         </form>
                     </div>
+                </div>
+                <div>
+                    {this.fetched && (<Navigate to={`/fetchpost/${this.state.user_id}`} replace="true" />)}
                 </div>
             </div>
         );
