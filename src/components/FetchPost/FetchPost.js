@@ -93,6 +93,6 @@ class FetchPost extends Component {
             </div>
         );
     }
-}
+} 
 
 export default FetchPost;
