@@ -65,7 +65,7 @@ class Login extends Component {
         })
             .then(res => {
                 console.log("Login Success");
-                login(this.state.username, this.state.password, res.data.id);
+                this.login(this.state.username, this.state.password, res.data.id);
             }).catch(error => {
                 console.log(error.response)
             });
