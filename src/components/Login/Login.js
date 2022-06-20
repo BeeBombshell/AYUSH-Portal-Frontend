@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './login.css';
 import axios from 'axios';
+import { AuthContext } from '../../contexts/AuthContext';
 
 class Login extends Component {
 
@@ -71,21 +72,27 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="container">
-            <div className="Login">
-                <form onSubmit={this.handleSubmit}>
-                    <div className="form-group">
-                        <label className='labelForm' htmlFor="exampleInputEmail">Username</label>
-                        <input name="username" value={this.state.username} onChange={this.handleChange} type="text" className="form-control" id="exampleInputUsername" placeholder="Enter Username" />
-                    </div>
-                    <div className="form-group">
-                        <label className='labelForm' htmlFor="exampleInputPassword">Password</label>
-                        <input name="password" value={this.state.password} onChange={this.handleChange} type="password" className="form-control" id="exampleInputPassword" placeholder="Enter Password" />
-                    </div>
-                    <button type="submit" className="btn btn-primary">Login</button>
-                </form>
-                </div>
-            </div>
+            <AuthContext.Consumer>
+                {(context) => { 
+                    return (
+                        <div className="container">
+                            <div className="Login">
+                                <form onSubmit={this.handleSubmit}>
+                                    <div className="form-group">
+                                        <label className='labelForm' htmlFor="exampleInputEmail">Username</label>
+                                        <input name="username" value={this.state.username} onChange={this.handleChange} type="text" className="form-control" id="exampleInputUsername" placeholder="Enter Username" />
+                                    </div>
+                                    <div className="form-group">
+                                        <label className='labelForm' htmlFor="exampleInputPassword">Password</label>
+                                        <input name="password" value={this.state.password} onChange={this.handleChange} type="password" className="form-control" id="exampleInputPassword" placeholder="Enter Password" />
+                                    </div>
+                                    <button type="submit" className="btn btn-primary">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    )
+                }}
+           </AuthContext.Consumer>
         );
     }
 }
