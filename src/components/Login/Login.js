@@ -11,7 +11,7 @@ class Login extends Component {
             username: '',
             password: '',
         };
-        
+
         this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJiaGF2eWEiLCJpYXQiOjE2NTUyNzc5MDUsImV4cCI6MTgxMjk1NzkwNX0.8PVPMkVNIU1vpCu6pX-XEj6ROPLVCQJU7GjesjPFEAY';
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -65,6 +65,7 @@ class Login extends Component {
         })
             .then(res => {
                 console.log("Login Success");
+                login(this.state.username, this.state.password, res.data.id);
             }).catch(error => {
                 console.log(error.response)
             });
@@ -73,7 +74,9 @@ class Login extends Component {
     render() {
         return (
             <AuthContext.Consumer>
-                {(context) => { 
+                {(context) => {
+                    const { isLoggedIn, username, password, user_id, login, logout } = context;
+
                     return (
                         <div className="container">
                             <div className="Login">
@@ -92,7 +95,7 @@ class Login extends Component {
                         </div>
                     )
                 }}
-           </AuthContext.Consumer>
+            </AuthContext.Consumer>
         );
     }
 }
