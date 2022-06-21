@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './login.css';
+import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../../contexts/AuthContext';
 
@@ -12,9 +13,10 @@ class Login extends Component {
             password: '',
         };
 
+        let loggedIn = false;
+
         this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJiaGF2eWEiLCJpYXQiOjE2NTUyNzc5MDUsImV4cCI6MTgxMjk1NzkwNX0.8PVPMkVNIU1vpCu6pX-XEj6ROPLVCQJU7GjesjPFEAY';
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(e) {
@@ -76,6 +78,7 @@ class Login extends Component {
                                             })
                                                 .then(res => {
                                                     console.log("Login Success");
+                                                    this.loggedIn = true;
                                                     login(this.state.username, this.state.password, res.data.id);
                                                     console.log(username, password, user_id);
                                                 }).catch(error => {
@@ -94,6 +97,9 @@ class Login extends Component {
                                     </div>
                                     <button type="submit" className="btn btn-primary">Login</button>
                                 </form>
+                            </div>
+                            <div>
+                                {this.loggedIn && (<Navigate to="/fetchpost/" replace="true" />)}
                             </div>
                         </div>
                     )

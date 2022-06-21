@@ -18,7 +18,6 @@ class AuthContextProvider extends React.Component {
             password: password,
             user_id: user_id,
         })
-        console.log(this.state);
     }
 
     logout = () => {
