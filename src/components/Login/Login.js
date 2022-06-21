@@ -46,31 +46,6 @@ class Login extends Component {
     //   });
     //   }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        // this.getWPnonce();
-        axios.get('http://localhost/network/wp-json/wp/v2/users/me', {
-            auth: {
-                username: this.state.username,
-                password: this.state.password,
-            },
-            headers: {
-                // 'Authorization': `Bearer ${this.token}`,
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Access-Control-Allow-Headers": "*",
-                "Access-Control-Allow-Origin": "*",
-                // "Access-Control-Allow-Methods": "*"
-            }
-        })
-            .then(res => {
-                console.log("Login Success");
-                this.login(this.state.username, this.state.password, res.data.id);
-            }).catch(error => {
-                console.log(error.response)
-            });
-    }
-
     render() {
         return (
             <AuthContext.Consumer>
@@ -80,7 +55,35 @@ class Login extends Component {
                     return (
                         <div className="container">
                             <div className="Login">
-                                <form onSubmit={this.handleSubmit}>
+                                <form onSubmit={
+                                    (e) => {
+                                        {
+                                            e.preventDefault();
+                                            // this.getWPnonce();
+                                            axios.get('http://localhost/network/wp-json/wp/v2/users/me', {
+                                                auth: {
+                                                    username: this.state.username,
+                                                    password: this.state.password,
+                                                },
+                                                headers: {
+                                                    // 'Authorization': `Bearer ${this.token}`,
+                                                    'Accept': 'application/json',
+                                                    'Content-Type': 'application/json',
+                                                    "Access-Control-Allow-Headers": "*",
+                                                    "Access-Control-Allow-Origin": "*",
+                                                    // "Access-Control-Allow-Methods": "*"
+                                                }
+                                            })
+                                                .then(res => {
+                                                    console.log("Login Success");
+                                                    login(this.state.username, this.state.password, res.data.id);
+                                                    console.log(username, password, user_id);
+                                                }).catch(error => {
+                                                    console.log(error.response)
+                                                });
+                                        }
+                                    }
+                                }>
                                     <div className="form-group">
                                         <label className='labelForm' htmlFor="exampleInputEmail">Username</label>
                                         <input name="username" value={this.state.username} onChange={this.handleChange} type="text" className="form-control" id="exampleInputUsername" placeholder="Enter Username" />
