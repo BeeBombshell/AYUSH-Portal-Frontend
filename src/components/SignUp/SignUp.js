@@ -125,7 +125,7 @@ class SignUp extends Component {
             <input name="country" value={this.state.country} onChange={this.handleChange} type="text" className="form-control" id="exampleInputCountry" placeholder="Enter Country" />
           </div>
 
-          <button type="submit" className="btn btn-primary">Register</button>
+            <button type="submit" className="btn btn-dark">Register</button>
 
         </form>
         </div>

@@ -95,7 +95,7 @@ class Login extends Component {
                                         <label className='labelForm' htmlFor="exampleInputPassword">Password</label>
                                         <input name="password" value={this.state.password} onChange={this.handleChange} type="password" className="form-control" id="exampleInputPassword" placeholder="Enter Password" />
                                     </div>
-                                    <button type="submit" className="btn btn-primary">Login</button>
+                                    <button type="submit" className="btn btn-dark">Login</button>
                                 </form>
                             </div>
                             <div>
