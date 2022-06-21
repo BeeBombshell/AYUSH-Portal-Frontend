@@ -2,7 +2,7 @@ import React from "react";
 import "./fetchPost.css";
 
 const PostMap = (props) => {
-    console.log(`Hello ${props.posts}`)
+    console.log(props.posts)
     const PostList = props.posts.map((post) => {
         return (
             <div key={post.id} className="PostCard">

@@ -10,22 +10,26 @@ class AuthContextProvider extends React.Component {
         user_id: 0,
     };
 
-    login = (username, password, user_id) => {
-        this.setState({
-            isLoggedIn: true,
-            username: username,
-            password: password,
-            user_id: user_id,
-        })
-    }
 
-    logout = () => {
-        this.setState({
-            isLoggedIn: false,
-            username: '',
-            password: '',
-            user_id: 0,
-        })
+    componentDidMount() {
+
+        this.login = (username, password, user_id) => {
+            this.setState({
+                isLoggedIn: true,
+                username: username,
+                password: password,
+                user_id: user_id,
+            })
+        }
+
+        this.logout = () => {
+            this.setState({
+                isLoggedIn: false,
+                username: '',
+                password: '',
+                user_id: 0,
+            })
+        }
     }
 
     render() {
