@@ -13,6 +13,30 @@
     width: 50%;
 }
 
+.flag {
+    position: absolute;
+    left: 6.52%;
+    right: 91.87%;
+    top: 0.50%;
+    bottom: 99.23%;
+    height: 30px;
+}
+
+.goi-text {
+    position: absolute;
+    left: 8.49%;
+    right: 77.16%;
+    top: 0.90%;
+    bottom: 99.17%;
+
+    font-family: 'Baloo 2', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
 .flex-right {
     background-color: #4D8AD1;
     clip-path: polygon(2% 0, 100% 0%, 100% 100%, 0% 100%);
