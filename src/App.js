@@ -9,6 +9,7 @@ import PostCard from './components/FetchPost/PostCard';
 import Home from './components/Home/Home';
 import AuthContextProvider from './contexts/AuthContext';
 import HeaderTop from './components/HeaderTop/HeaderTop';
+import HomeTop from './components/HomeTop/HomeTop';
 
 function App() {
   return (
@@ -21,14 +22,14 @@ function App() {
         </div>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomeTop />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/fetchpost" element={<FetchPost1 />} />
             <Route path="/fetchpost/:id" element={<PostCard />} />
           </Routes>
         </BrowserRouter>
-      </AuthContextProvider>      
+      </AuthContextProvider>
     </div>
   );
 }
