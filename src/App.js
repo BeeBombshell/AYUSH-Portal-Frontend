@@ -8,12 +8,14 @@ import FetchPost1 from './components/FetchPost/FetchPost1';
 import PostCard from './components/FetchPost/PostCard';
 import Home from './components/Home/Home';
 import AuthContextProvider from './contexts/AuthContext';
+import HeaderTop from './components/HeaderTop/HeaderTop';
 
 function App() {
   return (
     <div className="App">
       <AuthContextProvider>
         <div className='Header'>
+          <HeaderTop />
           <NavbarHeader />
           <NavbarMenu />
         </div>
