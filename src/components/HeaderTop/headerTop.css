@@ -28,7 +28,8 @@
     right: 77.16%;
     top: 1.20%;
     bottom: 99.17%;
-    
+    width: fit-content;
+
 
     font-family: 'Baloo 2', cursive;
     font-style: normal;
@@ -36,6 +37,12 @@
     font-size: 14px;
     color: #FFFFFF;
     word-wrap: break-word;
+}
+
+@media screen and (max-width: 1260px) {
+    .goi-text {
+        display: none;
+    }
 }
 
 .btn.btn-outline-light {
