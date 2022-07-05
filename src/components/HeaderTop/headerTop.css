@@ -28,14 +28,20 @@
     right: 77.16%;
     top: 0.90%;
     bottom: 99.17%;
+    
 
     font-family: 'Baloo 2', cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 22px;
     color: #FFFFFF;
+    word-wrap: break-word;
 }
+
+.btn.btn-outline-light {
+    
+}
+
 
 .flex-right {
     background-color: #4D8AD1;
