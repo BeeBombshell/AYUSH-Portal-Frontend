@@ -24,9 +24,9 @@
 
 .goi-text {
     position: absolute;
-    left: 8.49%;
+    left: 9%;
     right: 77.16%;
-    top: 0.90%;
+    top: 1.20%;
     bottom: 99.17%;
     
 
@@ -39,7 +39,9 @@
 }
 
 .btn.btn-outline-light {
-    
+    position: absolute;
+    left: 25%;
+    top: 0.50%;
 }
 
 
