@@ -1,7 +1,7 @@
 import "./homeTopCard.css";
 import {useState} from 'react';
 
-function HomeTopCard() {
+const HomeTopCard = () => {
     const [CardData, setCardData] = useState([
         {
             index: 1,
@@ -12,14 +12,14 @@ function HomeTopCard() {
 
         },
         {
-            index: 1,
+            index: 2,
             date: "13-Apr-2022",
             title: "CCRUM Organises National Sem...",
             description: "Unani Medicine is flourishing well in India and it is satisfying that we are partners in the development of this medical system, said Prof. Mohammad Afshar Alam, Vice Chancellor, Jamia Hamdard,",
             buttonText: "Unani",
         },
         {
-            index: 1,
+            index: 3,
             date: "03-May-2022",
             title: "Research about Homeopathy..",
             description: "High homeopathic dilutions are reported to be effective both in humans and animal/in vitro models. · Methodological problems in clinical trials ...",
@@ -35,14 +35,18 @@ function HomeTopCard() {
                 <div className="card-title">{card.title}</div>
                 <div className="card-description">{card.description}</div>
                 <div className="card-bottom">
-                    <div type="button" className="card-button">{card.buttonText}</div>
-                    <div className="card-arrow"></div>
+                    <div type="button" className="cards-button">{card.buttonText}</div>
+                    <i className="fas fa-arrow-right"></i>
                 </div>
             </div>
         )
     })
 
     return (
-        {CardList}
+        <div className="card-flex">
+            {CardList}
+        </div>
     )
 }
+
+export default HomeTopCard;
