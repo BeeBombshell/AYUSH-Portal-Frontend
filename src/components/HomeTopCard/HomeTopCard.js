@@ -1,5 +1,5 @@
 import "./homeTopCard.css";
-import {useState} from 'react';
+import { useState } from 'react';
 
 const HomeTopCard = () => {
     const [CardData, setCardData] = useState([
@@ -30,13 +30,15 @@ const HomeTopCard = () => {
     const CardList = CardData.map((card) => {
         return (
             <div key={card.index} className="card-container">
-                <div className="card-stripe"></div>
-                <div className="card-date">{card.date}</div>
-                <div className="card-title">{card.title}</div>
-                <div className="card-description">{card.description}</div>
-                <div className="card-bottom">
-                    <div type="button" className="cards-button">{card.buttonText}</div>
-                    <i className="fas fa-arrow-right"></i>
+                <div className="card-content">
+                    <div className="card-stripe"></div>
+                    <div className="card-date">{card.date}</div>
+                    <div className="card-title">{card.title}</div>
+                    <div className="card-description">{card.description}</div>
+                    <div className="card-bottom">
+                        <div type="button" className="cards-button">{card.buttonText}</div>
+                        <i className="fas fa-arrow-right"></i>
+                    </div>
                 </div>
             </div>
         )

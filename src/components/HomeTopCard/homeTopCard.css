@@ -35,7 +35,7 @@
 
 .card-title {
     position: absolute;
-    width: 330px;
+    width: 90%;
     height: 25px;
     left: 5%;
     top: 32%;
@@ -51,8 +51,8 @@
 
 .card-description{
     position: absolute;
-    width: 360px;
-    height: 45px;
+    width: 90%;
+    height: 25%;
     left: 5%;
     top: 45%;
 
@@ -107,4 +107,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.card-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
