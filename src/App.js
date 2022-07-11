@@ -8,6 +8,7 @@ import FetchPost1 from './components/FetchPost/FetchPost1';
 import PostCard from './components/FetchPost/PostCard';
 import Home from './components/Home/Home';
 import AuthContextProvider from './contexts/AuthContext';
+import Logout from './components/Logout/Logout';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/fetchpost" element={<FetchPost1 />} />
             <Route path="/fetchpost/:id" element={<PostCard />} />
