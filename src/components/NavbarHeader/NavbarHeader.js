@@ -1,15 +1,28 @@
 import React from "react";
 import emblem from "../../assets/images/emblem.svg";
 import "./navbarHeader.css";
+import AyushLogo from "../../assets/images/Ayush-logo.webp";
+import Ayushgrid from "../../assets/images/Ayush-grid.jpg";
 
 const NavbarHeader = () => {
     return (
         <div className="navbarHeader">
-        <nav className="navbar navbar-light bg-light">
-            <a className="navbar-brand" href="#">
-                <img src={emblem} width={30} height={30} className="d-inline-block align-top" alt="" />
-                Ayush Global Portal
-            </a>
+            <nav className="navbar navbar-light bg-light">
+                <div className="left">
+                    <a className="navbar-brand" href="#">
+                        <img src={AyushLogo} width={130} height={62} className="d-inline-block align-top" alt="" />
+                        <img src={Ayushgrid} width={166} height={63} className="d-inline-block align-top" alt="" />
+                    </a>
+                </div>
+                <div className="right">
+                    <div class="ui search">
+                        <div class="ui icon input">
+                            <input class="prompt" type="text" placeholder="Search..." />
+                                <i class="search icon"></i>
+                        </div>
+                        <div class="results"></div>
+                    </div>
+                </div>
             </nav>
         </div>
     )

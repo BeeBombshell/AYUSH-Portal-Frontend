@@ -1,5 +1,5 @@
 .bg-light {
-    background-color: #ececec!important;
+    background-color: white!important;
 }
 
 .navbarHeader {
@@ -8,3 +8,27 @@
 }
 
 /* New Branch for Design */
+
+.navbar.navbar-light.bg-light {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    flex: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right {
+    flex: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
