@@ -3,6 +3,8 @@ import './login.css';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../../contexts/AuthContext';
+import { withCookies, Cookies } from 'react-cookie';
+import { instanceOf } from 'prop-types';
 
 class Login extends Component {
 
@@ -17,6 +19,10 @@ class Login extends Component {
 
         this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJiaGF2eWEiLCJpYXQiOjE2NTUyNzc5MDUsImV4cCI6MTgxMjk1NzkwNX0.8PVPMkVNIU1vpCu6pX-XEj6ROPLVCQJU7GjesjPFEAY';
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
     }
 
     handleChange(e) {
@@ -79,7 +85,12 @@ class Login extends Component {
                                                 .then(res => {
                                                     console.log("Login Success");
                                                     this.loggedIn = true;
-                                                    login(this.state.username, this.state.password, res.data.id);
+                                                    // login(this.state.username, this.state.password, res.data.id);
+                                                    const { cookies } = this.props;
+                                                    cookies.set('username', this.state.username, { path: '/' });
+                                                    cookies.set('password', this.state.password, { path: '/' });
+                                                    cookies.set('user_id', res.data.id, { path: '/' });
+                                                    login(cookies.get('username'), cookies.get('password'), cookies.get('user_id'));
                                                     console.log(username, password, user_id);
                                                 }).catch(error => {
                                                     console.log(error.response)
@@ -109,4 +120,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withCookies(Login);
