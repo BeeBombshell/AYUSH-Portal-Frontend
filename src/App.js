@@ -22,7 +22,7 @@ function App() {
         </div>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<HomeTop />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/fetchpost" element={<FetchPost1 />} />

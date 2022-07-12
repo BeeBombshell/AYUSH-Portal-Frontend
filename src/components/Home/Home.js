@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import "./home.css"
+import HomeTop from '../HomeTop/HomeTop.js'
 
 export class Home extends Component {
   render() {
     return (
-        <div className='container'>
-            <h2>This is the Home Page for Ayush Global Portal</h2>
+        <div>
+            <HomeTop/>
         </div>
     )
   }
