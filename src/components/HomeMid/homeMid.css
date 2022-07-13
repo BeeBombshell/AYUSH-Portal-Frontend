@@ -1,0 +1,48 @@
+.homeMid-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.homeMid-heading {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-left: 7.5%;
+}
+
+.homeMid-headingBlock {
+    position: absolute;
+    width: 7px;
+    height: 40px;
+    background: #3AD0B5;
+}
+
+.homeMid-headingText {
+    position: absolute;
+    width: 27%;
+    height: .05%;
+    margin-left: 2%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height */
+
+
+    color: #626161;
+}
+
+.homeMid-headingDivider {
+    position: absolute;
+    width: 85%;
+    height: 2px;
+    left: 9.5%;
+    margin-top: 10%;
+
+    background: #E0E0E0;
+}
