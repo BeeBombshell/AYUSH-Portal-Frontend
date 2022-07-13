@@ -10,18 +10,15 @@
 
 /* New Branch for Design */
 
-.nav.navbar.navbar-light.bg-light {
-    background-color: white !important;
+.navbar.navbar-light.bg-light {
+    background-color: white!important;
     width: 100%;
-    display: flex;
-    width: fit-content;
-    flex-direction: row;
 }
 
-.left {
-    
+input {
+    border-radius: 0.5rem!important;
 }
 
-.right {
-    left: 50%;
+nav {
+    width: 50%;
 }
