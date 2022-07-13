@@ -5,7 +5,7 @@ import HomeTopCard from '../HomeTopCard/HomeTopCard'
 function HomeTop() { 
     return (
         <div className='homeTop-container'>
-            <img className='homeTop-img' src={bgimage} />
+            <img className='homeTop-img' src={bgimage} alt="HomeTop-Img" />
             <div className='homeTop-bg'></div>
             <div className='homeTop-right'>
                 <div className="right-content">

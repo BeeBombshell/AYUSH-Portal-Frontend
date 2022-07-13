@@ -42,7 +42,35 @@
     width: 85%;
     height: 2px;
     left: 9.5%;
-    margin-top: 10%;
+    margin-top: 9%;
 
     background: #E0E0E0;
+}
+
+.homeMid-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7%;
+    margin-left: 7.5%;
+}
+
+.homeMid-textBlock {
+    position: absolute;
+    width: 52%;
+    height: 22%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #5B5959;
+}
+
+.homeMid-imgBlock {
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    left: 62%;
 }
