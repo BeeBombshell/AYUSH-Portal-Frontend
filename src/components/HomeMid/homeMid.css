@@ -1,4 +1,4 @@
-.homeMid-container{
+.homeMid-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -50,7 +50,7 @@
 .homeMid-content {
     display: flex;
     flex-direction: row;
-    margin-top: 7%;
+    margin-top: 8%;
     margin-left: 7.5%;
 }
 
@@ -70,7 +70,33 @@
 
 .homeMid-imgBlock {
     position: absolute;
-    width: 30%;
+    width: 25%;
     height: 45%;
-    left: 62%;
+    left: 64%;
+}
+
+.homeMid-button {
+    position: absolute;
+    left: 7.5%;
+    top: 75%;
+    width: 120px;
+    height: 40px;
+    border: 2px solid #1084D2;
+    text-align: center;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 35px;
+    color: #1084D2;
+}
+
+.homeMid-button:hover {
+    text-decoration: underline;
+}
+
+.homeMid-button:active {
+    background-color: #1084D2;
+    color: #FFFFFF;
 }
