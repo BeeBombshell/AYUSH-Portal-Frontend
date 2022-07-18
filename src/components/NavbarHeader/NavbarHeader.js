@@ -11,18 +11,19 @@ const NavbarHeader = () => {
                 <div className="left">
                     <a className="navbar-brand" href="#">
                         <img src={AyushLogo} width={130} height={62} className="d-inline-block align-top" alt="" />
+                        &nbsp;&nbsp;
                         <img src={Ayushgrid} width={166} height={63} className="d-inline-block align-top" alt="" />
                     </a>
                 </div>
-                <div className="right">
+                {/* <div className="right"> */}
                     <div className="ui search">
                         <div className="ui icon input">
                             <input className="prompt" type="text" placeholder="Search..." />
                                 <i className="search icon"></i>
                         </div>
-                        <div className="results"></div>
+                        
                     </div>
-                </div>
+                {/* </div> */}
             </nav>
         </div>
     )

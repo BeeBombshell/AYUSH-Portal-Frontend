@@ -10,13 +10,20 @@
 
 /* New Branch for Design */
 
+.left {
+    margin-left: -100px;
+}
+
 .navbar.navbar-light.bg-light {
     background-color: white!important;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 input {
-    border-radius: 0.5rem!important;
+    border-radius: 0.25rem!important;
+    width: 900px;
 }
 
 nav {
