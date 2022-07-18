@@ -3,6 +3,7 @@ import emblem from "../../assets/images/emblem.svg";
 import "./navbarHeader.css";
 import AyushLogo from "../../assets/images/Ayush-logo.webp";
 import Ayushgrid from "../../assets/images/Ayush-grid.jpg";
+import mohotsav from "../../assets/images/mohotsav.png";
 
 const NavbarHeader = () => {
     return (
@@ -21,8 +22,9 @@ const NavbarHeader = () => {
                             <input className="prompt" type="text" placeholder="Search..." />
                                 <i className="search icon"></i>
                         </div>
-                        
                     </div>
+                    &nbsp;&nbsp;
+                    <img src={mohotsav} width={100} height={65} className="d-inline-block align-top" alt="" />
                 {/* </div> */}
             </nav>
         </div>
