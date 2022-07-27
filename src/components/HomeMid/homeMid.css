@@ -1,0 +1,120 @@
+.homeMid-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.homeMid-heading1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-left: 7.5%;
+}
+
+.homeMid-heading2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25%;
+    margin-left: 7.5%;
+}
+
+.homeMid-headingBlock {
+    position: absolute;
+    width: 7px;
+    height: 40px;
+    background: #3AD0B5;
+}
+
+.homeMid-headingText {
+    position: absolute;
+    width: 27%;
+    height: .05%;
+    margin-left: 2%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height */
+
+
+    color: #626161;
+}
+
+.homeMid-headingDivider1 {
+    position: absolute;
+    width: 85%;
+    height: 2px;
+    left: 9.5%;
+    margin-top: 9%;
+
+    background: #E0E0E0;
+}
+
+.homeMid-headingDivider2 {
+    position: absolute;
+    width: 85%;
+    height: 2px;
+    left: 9.5%;
+    margin-top: 3.5%;
+
+    background: #E0E0E0;
+}
+
+.homeMid-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+    margin-left: 7.5%;
+}
+
+.homeMid-textBlock {
+    position: absolute;
+    margin-top: 2%;
+    width: 52%;
+    height: 22%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #5B5959;
+}
+
+.homeMid-imgBlock {
+    position: absolute;
+    width: 25%;
+    height: 45%;
+    left: 64%;
+}
+
+.homeMid-button {
+    position: absolute;
+    left: 7.5%;
+    top: 80%;
+    width: 120px;
+    height: 40px;
+    border: 2px solid #1084D2;
+    text-align: center;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 35px;
+    color: #1084D2;
+}
+
+.homeMid-button:hover {
+    text-decoration: underline;
+}
+
+.homeMid-button:active {
+    background-color: #1084D2;
+    color: #FFFFFF;
+}

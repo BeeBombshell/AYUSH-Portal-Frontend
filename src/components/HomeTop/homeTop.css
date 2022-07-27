@@ -1,0 +1,90 @@
+.homeTop-bg {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    left: 2px;
+    background: linear-gradient(251.93deg, #A9E1F2 31.85%, rgba(19, 176, 225, 0) 173.87%);
+    opacity: 0.8;
+}
+
+.homeTop-img {
+    position: absolute;
+    width: 80%;
+    height: 95%;
+    left: 0px;
+
+    /* background: url(3d-medical-background-with-male-head-brain-dna-strands.jpg); */
+}
+
+.homeTop-right {
+    position: absolute;
+    width: 58%;
+    height: 95%;
+    left: 42%;
+
+    background: linear-gradient(267.72deg, #4D8AD1 39.43%, rgba(0, 66, 118, 0) 97.64%);
+}
+
+.right-content{
+    position: absolute;
+    top: 27%;
+    left: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 500px;
+    height: 33%;
+}
+
+.right-title{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+}
+
+.right-description{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 480px;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+}
+
+.btn.btn-outline-primary {
+    background: transparent;
+    border-color: #FFFFFF;
+    mix-blend-mode: normal;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+    border-radius: 0px;
+    width: 150px;
+    height: 44.12px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    color:#FFFFFF
+}
+
+.btn.btn-outline-primary:hover{
+    text-decoration: underline;
+}
+
+.btn.btn-outline-primary:focus{
+    outline: none;
+    box-shadow: none;
+}

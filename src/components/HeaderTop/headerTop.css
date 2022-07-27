@@ -1,0 +1,60 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    width: 100%;
+}
+
+.flex-left {
+    background-color: #43C0AA;
+    clip-path: polygon(0 0, 100% 0%, 98% 100%, 0% 100%);
+    height: 100%;
+    width: 50%;
+}
+
+.flag {
+    position: absolute;
+    left: 6.52%;
+    right: 91.87%;
+    top: 0.50%;
+    bottom: 99.23%;
+    height: 30px;
+}
+
+.goi-text {
+    position: absolute;
+    left: 9%;
+    right: 77.16%;
+    top: 1.20%;
+    bottom: 99.17%;
+    width: fit-content;
+
+
+    font-family: 'Baloo 2', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 1260px) {
+    .goi-text {
+        display: none;
+    }
+}
+
+.btn.btn-outline-light {
+    position: absolute;
+    left: 25%;
+    top: 0.50%;
+}
+
+
+.flex-right {
+    background-color: #4D8AD1;
+    clip-path: polygon(2% 0, 100% 0%, 100% 100%, 0% 100%);
+    height: 100%;
+    width: 50%;
+}

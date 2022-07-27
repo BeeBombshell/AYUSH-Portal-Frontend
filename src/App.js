@@ -8,6 +8,9 @@ import FetchPost1 from './components/FetchPost/FetchPost1';
 import PostCard from './components/FetchPost/PostCard';
 import Home from './components/Home/Home';
 import AuthContextProvider from './contexts/AuthContext';
+import HeaderTop from './components/HeaderTop/HeaderTop';
+import HomeTop from './components/HomeTop/HomeTop';
+import HomeMid from './components/HomeMid/HomeMid';
 import Logout from './components/Logout/Logout';
 
 function App() {
@@ -15,12 +18,13 @@ function App() {
     <div className="App">
       <AuthContextProvider>
         <div className='Header'>
+          <HeaderTop />
           <NavbarHeader />
           <NavbarMenu />
         </div>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomeTop/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<SignUp />} />
@@ -28,7 +32,7 @@ function App() {
             <Route path="/fetchpost/:id" element={<PostCard />} />
           </Routes>
         </BrowserRouter>
-      </AuthContextProvider>      
+      </AuthContextProvider>
     </div>
   );
 }

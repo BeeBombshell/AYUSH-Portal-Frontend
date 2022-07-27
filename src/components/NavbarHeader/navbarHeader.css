@@ -1,8 +1,31 @@
 .bg-light {
-    background-color: #ececec!important;
+    background-color: white !important;
 }
 
 .navbarHeader {
     margin: 0;
     padding: 0;
+    width: 100%;
+}
+
+/* New Branch for Design */
+
+.left {
+    margin-left: -100px;
+}
+
+.navbar.navbar-light.bg-light {
+    background-color: white!important;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border-radius: 0.25rem!important;
+    width: 900px;
+}
+
+nav {
+    width: 50%;
 }
