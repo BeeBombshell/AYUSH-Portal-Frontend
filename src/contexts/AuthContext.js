@@ -1,13 +1,20 @@
 import React, { createContext } from 'react';
+import { withCookies, Cookies } from 'react-cookie';
+import { instanceOf } from 'prop-types';
 
 export const AuthContext = createContext();
 
 class AuthContextProvider extends React.Component {
+    
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+    }
+
     state = {
         isLoggedIn: false,
-        username: '',
-        password: '',
-        user_id: 0,
+        username: this.props.cookies.get('username') || '',
+        password: this.props.cookies.get('password') || '',
+        user_id: this.props.cookies.get('user_id') || '',
     };
 
 
@@ -38,4 +45,4 @@ class AuthContextProvider extends React.Component {
     }
 }
 
-export default AuthContextProvider;
+export default withCookies(AuthContextProvider);

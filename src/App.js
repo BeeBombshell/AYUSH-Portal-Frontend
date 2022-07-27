@@ -11,6 +11,7 @@ import AuthContextProvider from './contexts/AuthContext';
 import HeaderTop from './components/HeaderTop/HeaderTop';
 import HomeTop from './components/HomeTop/HomeTop';
 import HomeMid from './components/HomeMid/HomeMid';
+import Logout from './components/Logout/Logout';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeTop/>} />
             <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/fetchpost" element={<FetchPost1 />} />
             <Route path="/fetchpost/:id" element={<PostCard />} />
